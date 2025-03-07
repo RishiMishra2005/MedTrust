@@ -51,7 +51,7 @@ A mapping of the challenges faced by the traditional system and the features imp
 
 * Step I: Clone the Repository
 ```sh
-      $ git clone https://github.com/rishimishra2005/MedTrust.git      
+      $ git clone https://github.com/RishiMishra2005/MedTrust.git      
 ```
 * Step II: Install the required packages
 ```sh
