@@ -1,0 +1,89 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <% include partials/head %>
+
+  <title>Dashboard | Medicyl</title>
+
+<style>
+
+html{
+  
+  
+  float:center;
+
+}
+body {
+  font-family: 'Roboto', sans-serif; 
+  float:center;
+
+}
+.card {
+padding: 1rem;
+border: 1px solid black;
+margin: 1rem;
+}
+</style>
+
+<header>
+    <% include partials/header %>
+</header>
+
+
+
+
+
+
+</head>
+<main>
+  
+<body>
+    <div class="jumbotron" style="background: -webkit-linear-gradient(left, #3931af, #00c6ff);">
+        <h1 class=" text-light" style="text-align:center">Know Your Past Record ??</h1>
+        <br>
+        <form class="justify-content-center my-2 my-lg-0">
+          <input class="form-control mr-sm-2 center" type="search" placeholder="Search Medical Record" aria-label="Search">
+          <br>
+          <div class="text-center"> 
+          <button class="btn btn-outline-light my-2 my-sm-0"  type="submit">Search</button>
+          </div>
+        </form>
+    </div>
+<div style=" float:center;">
+    <div class="container row" style="float:right;  width:80%;">
+    <% for(var i=0;i<DocList.length;i++){%>
+          <div class="card border-success col-md-4 mb-3" >
+            <div class="card-header bg-transparent border-success">
+              
+              <form method="POST">
+              <input type="text" value="<%= DocList[i].name %>" name="docname" style="display: none;">
+              <button class="btn btn text-success"><%= DocList[i].type %></button>
+              </form>
+            
+            </div>
+            <div class="card-body text-success">
+              <h5 class="card-title"><%= DocList[i].name %></h5>
+              <p class="card-text"><%= DocList[i].description%></p>
+            </div>
+          
+            <div class="card-footer bg-transparent border-success">
+              <%= DocList[i].date%>
+            </div>
+          </div>
+
+          
+          <%  } %>
+          
+        </div>
+</div>
+</main>
+
+<footer style="top:99%; text-align:bottom; height:100%;  position: fixed;">
+    <% include partials/footer %>
+</footer>
+
+</body>
+</html>
