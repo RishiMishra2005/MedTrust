@@ -65,5 +65,3 @@ A mapping of the challenges faced by the traditional system and the features imp
 ```
 
 ------------------------------------------
-### License
-This project is licensed under the MIT - see the [LICENSE](./LICENSE) file for details.
